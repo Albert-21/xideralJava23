@@ -1,4 +1,4 @@
-package com.curso.v7;
+package com.curso.v10;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,12 @@ public class Principal {
 		
 		ArrayList<Operacion> lista = new ArrayList<>();
 		
-		//lista.add(new Operacion(8,4));
 		lista.add(new Suma(8,4));
 		lista.add(new Resta(8,4));
 		lista.add(new Division(8,4));
 		lista.add(new Potencia(8,4));
 		lista.add(new Multi(8,4));
-		
+		System.out.println("Interface con ClaseAbstracta");
 		show(lista);
 		
 	}
@@ -33,9 +32,8 @@ public class Principal {
 	
 		for (int x=0;x <lista.size();++x) {
 			
-			//POLIMORFISMO
 			Operacion ope = lista.get(x);
-			System.out.println(ope.toString());
+			System.out.println(ope);
 			System.out.println(ope.ejecuta());
 			
 		}
